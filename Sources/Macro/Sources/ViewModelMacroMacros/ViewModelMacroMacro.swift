@@ -80,7 +80,8 @@ public struct ViewModelMacro: MemberMacro, ExtensionMacro {
                 changes: [
                     .replaceTrailingTrivia(
                         token: declaration.memberBlock.leftBrace,
-                        newTrivia: Trivia(pieces: [
+                        newTrivia: Trivia(pieces:
+                            declaration.memberBlock.leftBrace.trailingTrivia + [
                             .newlines(1),
                             .spaces(4),
                             .lineComment("struct State { }"),
@@ -105,7 +106,8 @@ public struct ViewModelMacro: MemberMacro, ExtensionMacro {
                 changes: [
                     .replaceTrailingTrivia(
                         token: declaration.memberBlock.leftBrace,
-                        newTrivia: Trivia(pieces: [
+                        newTrivia: Trivia(pieces:
+                            declaration.memberBlock.leftBrace.trailingTrivia + [
                             .newlines(1),
                             .spaces(4),
                             .lineComment("enum Action { }"),
@@ -130,7 +132,8 @@ public struct ViewModelMacro: MemberMacro, ExtensionMacro {
                 changes: [
                     .replaceTrailingTrivia(
                         token: declaration.memberBlock.leftBrace,
-                        newTrivia: Trivia(pieces: [
+                        newTrivia: Trivia(pieces:
+                            declaration.memberBlock.leftBrace.trailingTrivia + [
                             .newlines(1),
                             .spaces(4),
                             .lineComment("func reduce(state: inout State, action: Action) { }"),

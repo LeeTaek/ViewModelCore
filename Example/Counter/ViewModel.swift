@@ -9,6 +9,7 @@ import Foundation
 import ViewModelMacro
 
 @ViewModel
+@dynamicMemberLookup
 final class ViewModel {
     struct State {
         var count: Int = 0

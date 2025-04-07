@@ -7,12 +7,12 @@
 
 import UIKit
 import Combine
+import ViewModelCore
 
 class ViewController: UIViewController {
     @IBOutlet weak var count: UILabel!
     
     private let viewModel = ViewModel()
-    private var cancellable = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +28,11 @@ class ViewController: UIViewController {
     }
     
     private func bind() {
-        viewModel.$state
+        self.viewModel.$state
             .map { $0.count.description }
-            .sink { [weak self] countText in
-                self?.count.text = countText
+            .bind(storeIn: &cancellables) { [weak self] text in
+                self?.count.text = text
             }
-            .store(in: &cancellable)      
     }
 }
 

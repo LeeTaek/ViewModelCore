@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98D31DCB2D9E4CB00002273C /* ViewModelMacro in Frameworks */ = {isa = PBXBuildFile; productRef = 98D31DCA2D9E4CB00002273C /* ViewModelMacro */; };
+		9821B30D2DA38B5E008994C9 /* ViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9821B30C2DA38B5E008994C9 /* ViewModelCore */; };
+		98580CD42D9FAEDB00CAE51E /* ViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 98580CD32D9FAEDB00CAE51E /* ViewModelCore */; };
 		98E6B3482D9E80AE00903040 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E6B3432D9E80AE00903040 /* Main.storyboard */; };
 		98E6B3492D9E80AE00903040 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E6B3412D9E80AE00903040 /* LaunchScreen.storyboard */; };
 		98E6B34B2D9E80AE00903040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E6B33E2D9E80AE00903040 /* Assets.xcassets */; };
@@ -47,7 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D31DCB2D9E4CB00002273C /* ViewModelMacro in Frameworks */,
+				9821B30D2DA38B5E008994C9 /* ViewModelCore in Frameworks */,
+				98580CD42D9FAEDB00CAE51E /* ViewModelCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +121,8 @@
 			);
 			name = Counter;
 			packageProductDependencies = (
-				98D31DCA2D9E4CB00002273C /* ViewModelMacro */,
+				98580CD32D9FAEDB00CAE51E /* ViewModelCore */,
+				9821B30C2DA38B5E008994C9 /* ViewModelCore */,
 			);
 			productName = MacroTest;
 			productReference = 98D31D922D9E22DF0002273C /* Counter.app */;
@@ -174,7 +177,7 @@
 			mainGroup = 98D31D892D9E22DF0002273C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9878ACF02D9E80FE0092E157 /* XCLocalSwiftPackageReference "../../ViewModelMacro" */,
+				9821B30B2DA38B5E008994C9 /* XCLocalSwiftPackageReference "../Sources/ViewModelCore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98D31D932D9E22DF0002273C /* Products */;
@@ -503,16 +506,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9878ACF02D9E80FE0092E157 /* XCLocalSwiftPackageReference "../../ViewModelMacro" */ = {
+		9821B30B2DA38B5E008994C9 /* XCLocalSwiftPackageReference "../Sources/ViewModelCore" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../ViewModelMacro;
+			relativePath = ../Sources/ViewModelCore;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		98D31DCA2D9E4CB00002273C /* ViewModelMacro */ = {
+		9821B30C2DA38B5E008994C9 /* ViewModelCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ViewModelMacro;
+			productName = ViewModelCore;
+		};
+		98580CD32D9FAEDB00CAE51E /* ViewModelCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ViewModelCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
