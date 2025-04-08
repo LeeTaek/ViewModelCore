@@ -11,6 +11,8 @@ import ViewModelCore
 
 class ViewController: UIViewController {
     @IBOutlet weak var count: UILabel!
+    @IBOutlet weak var textfieldLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
     
     private let viewModel = ViewModel()
     
@@ -30,8 +32,21 @@ class ViewController: UIViewController {
     private func bind() {
         self.viewModel.$state
             .map { $0.count.description }
-            .bind(storeIn: &cancellables) { [weak self] text in
+            .bind(on: self) { [weak self] text in
                 self?.count.text = text
+            }
+        
+        self.viewModel.$state
+            .map { $0.text }
+            .bind(on: self) { [weak self] text in
+                self?.textfieldLabel.text = text
+            }
+        
+        self.textField
+            .textPublisher
+            .bind(on: self) { [weak self] text in
+                guard let text else { return }
+                self?.viewModel.send(.inputTextfield(text))
             }
     }
 }

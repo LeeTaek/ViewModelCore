@@ -8,14 +8,29 @@
 import Testing
 @testable import Counter
 
-struct MacroTestTests {
+final class MacroTestTests {
+    var viewModel: ViewModel
+    
+    init() {
+        self.viewModel = ViewModel()
+    }
+    
+    deinit {
+        viewModel.send(.reset)
+    }
 
     @Test func increaseExample() async throws {
-        let viewModel = ViewModel()
         let initCount = viewModel.state.count
         viewModel.send(.increase)
         
         #expect(initCount+1 == viewModel.state.count)
     }
 
+    
+    @Test func inputTextfield() async throws {
+        let text = "안녕하세요"
+        viewModel.send(.inputTextfield("안녕하세요"))
+        
+        #expect(text == viewModel.state.text)
+    }
 }

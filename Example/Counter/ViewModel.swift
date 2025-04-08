@@ -9,15 +9,17 @@ import Foundation
 import ViewModelMacro
 
 @ViewModel
-@dynamicMemberLookup
 final class ViewModel {
     struct State {
         var count: Int = 0
+        var text: String = ""
     }
     
     enum Action {
         case increase
         case decrease
+        case inputTextfield(String)
+        case reset
     }
     
     func reduce(state: inout State, action: Action) {
@@ -26,6 +28,11 @@ final class ViewModel {
             state.count += 1
         case .decrease:
             state.count -= 1
+        case .inputTextfield(let text):
+            state.text = text
+        case .reset:
+            state.count = 0
+            state.text = ""
         }
     }
 }
