@@ -13,12 +13,15 @@ final class ViewModel {
     struct State {
         var count: Int = 0
         var text: String = ""
+        var datasourceItem: [Int] = { Array(0..<40) }()
     }
     
     enum Action {
         case increase
         case decrease
         case inputTextfield(String)
+        case increaseDatasourceItems
+        case decreaseDatasourceItems
         case reset
     }
     
@@ -33,6 +36,18 @@ final class ViewModel {
         case .reset:
             state.count = 0
             state.text = ""
+        case .increaseDatasourceItems:
+            let items = state.datasourceItem
+            if items.isEmpty {
+                state.datasourceItem = [0]
+            } else {
+                state.datasourceItem = items + [items.count]
+            }
+        case .decreaseDatasourceItems:
+            let items = state.datasourceItem
+            if !items.isEmpty {
+                state.datasourceItem = items.dropLast()
+            }
         }
     }
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9821B30D2DA38B5E008994C9 /* ViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9821B30C2DA38B5E008994C9 /* ViewModelCore */; };
 		98580CD42D9FAEDB00CAE51E /* ViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 98580CD32D9FAEDB00CAE51E /* ViewModelCore */; };
+		98D8EF542DA5FD37001D3A8F /* ViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = 98D8EF532DA5FD37001D3A8F /* ViewModelCore */; };
+		98D8EF562DA60326001D3A8F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D8EF552DA60326001D3A8F /* CollectionViewCell.swift */; };
 		98E6B3482D9E80AE00903040 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E6B3432D9E80AE00903040 /* Main.storyboard */; };
 		98E6B3492D9E80AE00903040 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E6B3412D9E80AE00903040 /* LaunchScreen.storyboard */; };
 		98E6B34B2D9E80AE00903040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E6B33E2D9E80AE00903040 /* Assets.xcassets */; };
@@ -32,6 +34,7 @@
 /* Begin PBXFileReference section */
 		98D31D922D9E22DF0002273C /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D31DA82D9E22E00002273C /* CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98D8EF552DA60326001D3A8F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		98E6B33D2D9E80AE00903040 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98E6B33E2D9E80AE00903040 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98E6B33F2D9E80AE00903040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9821B30D2DA38B5E008994C9 /* ViewModelCore in Frameworks */,
+				98D8EF542DA5FD37001D3A8F /* ViewModelCore in Frameworks */,
 				98580CD42D9FAEDB00CAE51E /* ViewModelCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +96,7 @@
 				98E6B3442D9E80AE00903040 /* SceneDelegate.swift */,
 				98E6B3452D9E80AE00903040 /* ViewController.swift */,
 				98E6B3462D9E80AE00903040 /* ViewModel.swift */,
+				98D8EF552DA60326001D3A8F /* CollectionViewCell.swift */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			packageProductDependencies = (
 				98580CD32D9FAEDB00CAE51E /* ViewModelCore */,
 				9821B30C2DA38B5E008994C9 /* ViewModelCore */,
+				98D8EF532DA5FD37001D3A8F /* ViewModelCore */,
 			);
 			productName = MacroTest;
 			productReference = 98D31D922D9E22DF0002273C /* Counter.app */;
@@ -177,7 +183,7 @@
 			mainGroup = 98D31D892D9E22DF0002273C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9821B30B2DA38B5E008994C9 /* XCLocalSwiftPackageReference "../Sources/ViewModelCore" */,
+				98D8EF522DA5FD37001D3A8F /* XCLocalSwiftPackageReference "../Sources/ViewModelCore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98D31D932D9E22DF0002273C /* Products */;
@@ -215,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98D8EF562DA60326001D3A8F /* CollectionViewCell.swift in Sources */,
 				98E6B34C2D9E80AE00903040 /* ViewController.swift in Sources */,
 				98E6B34D2D9E80AE00903040 /* AppDelegate.swift in Sources */,
 				98E6B34E2D9E80AE00903040 /* SceneDelegate.swift in Sources */,
@@ -506,7 +513,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9821B30B2DA38B5E008994C9 /* XCLocalSwiftPackageReference "../Sources/ViewModelCore" */ = {
+		98D8EF522DA5FD37001D3A8F /* XCLocalSwiftPackageReference "../Sources/ViewModelCore" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Sources/ViewModelCore;
 		};
@@ -518,6 +525,10 @@
 			productName = ViewModelCore;
 		};
 		98580CD32D9FAEDB00CAE51E /* ViewModelCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ViewModelCore;
+		};
+		98D8EF532DA5FD37001D3A8F /* ViewModelCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ViewModelCore;
 		};
